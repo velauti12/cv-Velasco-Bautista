@@ -1,6 +1,6 @@
 # Curriculum Web — Trabajo Práctico Nº1
 
-Trabajo práctico nº1. Curriculum Web - Apellido Nombre - URL Proyecto
+Trabajo práctico nº1. Curriculum Web - Velasco Bautista - https://velauti12.github.io/cv-ficticio/
 
 ## Descripción
 
