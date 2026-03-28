@@ -1,0 +1,451 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Currículum Vitae de Alejandro Martínez — Desarrollador Java Senior con más de 8 años de experiencia en desarrollo backend y arquitecturas cloud." />
+    <title>Alejandro Martínez | Desarrollador Java Senior</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Fira+Code:wght@400;500&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+
+    <!-- ===== BOTÓN VOLVER ARRIBA ===== -->
+    <button class="btn-top" id="btnTop" aria-label="Volver al inicio">
+      <svg class="btn-top__icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+        <polyline points="18 15 12 9 6 15"></polyline>
+      </svg>
+    </button>
+
+    <!-- ===== NAVEGACIÓN ===== -->
+    <nav class="navbar" id="navbar">
+      <div class="navbar__container">
+        <span class="navbar__logo">AM<span class="navbar__logo-dot">.</span></span>
+        <ul class="navbar__links">
+          <li><a class="navbar__link" href="#hero">Inicio</a></li>
+          <li><a class="navbar__link" href="#sobre-mi">Sobre mí</a></li>
+          <li><a class="navbar__link" href="#experiencia">Experiencia</a></li>
+          <li><a class="navbar__link" href="#habilidades">Habilidades</a></li>
+          <li><a class="navbar__link" href="#contacto">Contacto</a></li>
+        </ul>
+      </div>
+    </nav>
+
+    <!-- ===== HERO / ENCABEZADO ===== -->
+    <header class="hero" id="hero">
+      <div class="hero__bg-grid"></div>
+      <div class="hero__glow hero__glow--1"></div>
+      <div class="hero__glow hero__glow--2"></div>
+      <div class="hero__container">
+        <div class="hero__badge">
+          <span class="hero__badge-dot"></span>
+          Disponible para nuevos proyectos
+        </div>
+        <div class="hero__photo-wrapper">
+          <img
+            class="hero__photo"
+            src="https://images.pexels.com/photos/2379004/pexels-photo-2379004.jpeg?auto=compress&cs=tinysrgb&w=300&h=300&fit=crop"
+            alt="Foto de perfil de Alejandro Martínez"
+          />
+          <div class="hero__photo-ring"></div>
+        </div>
+        <h1 class="hero__name">Alejandro Martínez</h1>
+        <p class="hero__title">Desarrollador <span class="hero__title-highlight">Java Senior</span></p>
+        <p class="hero__subtitle">Backend · Cloud · Arquitectura de Microservicios</p>
+        <div class="hero__actions">
+          <a class="btn btn--primary" href="#contacto">Contáctame</a>
+          <a class="btn btn--outline" href="#sobre-mi">Ver CV</a>
+        </div>
+      </div>
+    </header>
+
+    <!-- ===== SOBRE MÍ ===== -->
+    <section class="section" id="sobre-mi">
+      <div class="section__container">
+        <div class="section__label">Perfil</div>
+        <h2 class="section__title">Sobre mí</h2>
+        <div class="about__grid">
+          <div class="about__text-block">
+            <p class="about__paragraph">
+              Soy <strong>Desarrollador Java Senior</strong> con más de 8 años de experiencia diseñando y construyendo
+              soluciones de software robustas para entornos de alta disponibilidad. Mi trayectoria inició en Buenos Aires,
+              donde colaboré en startups tecnológicas hasta incorporarme a grandes corporaciones multinacionales,
+              liderando equipos de hasta 12 desarrolladores.
+            </p>
+            <p class="about__paragraph">
+              Me especializo en arquitecturas de microservicios con Spring Boot, integración de APIs RESTful y despliegue
+              en entornos cloud (AWS y GCP). Soy un apasionado del código limpio, las buenas prácticas de TDD y la
+              mejora continua de procesos DevOps.
+            </p>
+          </div>
+          <div class="about__stats">
+            <div class="stat-card">
+              <span class="stat-card__number">8+</span>
+              <span class="stat-card__label">Años de experiencia</span>
+            </div>
+            <div class="stat-card">
+              <span class="stat-card__number">40+</span>
+              <span class="stat-card__label">Proyectos entregados</span>
+            </div>
+            <div class="stat-card">
+              <span class="stat-card__number">12</span>
+              <span class="stat-card__label">Equipo máximo liderado</span>
+            </div>
+            <div class="stat-card">
+              <span class="stat-card__number">3</span>
+              <span class="stat-card__label">Certificaciones cloud</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== EXPERIENCIA ===== -->
+    <section class="section section--dark" id="experiencia">
+      <div class="section__container">
+        <div class="section__label">Trayectoria</div>
+        <h2 class="section__title">Experiencia Laboral</h2>
+        <div class="timeline">
+
+          <!-- Empleo 1 -->
+          <article class="timeline__item" id="exp-mercadolibre">
+            <div class="timeline__marker"></div>
+            <div class="timeline__card">
+              <div class="timeline__header">
+                <div class="timeline__info">
+                  <h3 class="timeline__role">Java Tech Lead</h3>
+                  <p class="timeline__company">
+                    <a class="timeline__company-link" href="https://www.mercadolibre.com.ar" target="_blank" rel="noopener noreferrer">
+                      MercadoLibre
+                      <svg class="timeline__link-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg>
+                    </a>
+                  </p>
+                  <p class="timeline__contact">
+                    <a class="timeline__email-link" href="mailto:rrhh@mercadolibre.com">
+                      <svg class="timeline__email-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
+                      rrhh@mercadolibre.com
+                    </a>
+                  </p>
+                </div>
+                <span class="timeline__period">2021 — Presente</span>
+              </div>
+              <p class="timeline__description">
+                Lidero el equipo de backend del módulo de pagos, gestionando una infraestructura que procesa más de
+                2 millones de transacciones diarias. Implementé la migración del monolito legacy a microservicios con
+                Spring Boot, reduciendo la latencia en un 40% y los costos operativos en un 25%.
+              </p>
+              <div class="timeline__tags">
+                <span class="tag">Java 21</span>
+                <span class="tag">Spring Boot</span>
+                <span class="tag">Kafka</span>
+                <span class="tag">AWS</span>
+                <span class="tag">Docker</span>
+              </div>
+            </div>
+          </article>
+
+          <!-- Empleo 2 -->
+          <article class="timeline__item" id="exp-globant">
+            <div class="timeline__marker"></div>
+            <div class="timeline__card">
+              <div class="timeline__header">
+                <div class="timeline__info">
+                  <h3 class="timeline__role">Senior Java Developer</h3>
+                  <p class="timeline__company">
+                    <a class="timeline__company-link" href="https://www.globant.com" target="_blank" rel="noopener noreferrer">
+                      Globant
+                      <svg class="timeline__link-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg>
+                    </a>
+                  </p>
+                  <p class="timeline__contact">
+                    <a class="timeline__email-link" href="mailto:careers@globant.com">
+                      <svg class="timeline__email-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
+                      careers@globant.com
+                    </a>
+                  </p>
+                </div>
+                <span class="timeline__period">2018 — 2021</span>
+              </div>
+              <p class="timeline__description">
+                Desarrollé integraciones críticas para un cliente del sector financiero en EE.UU., construyendo
+                APIs RESTful y servicios de mensajería asíncrona. Participé activamente en procesos de code review
+                y mentoré a desarrolladores junior del equipo.
+              </p>
+              <div class="timeline__tags">
+                <span class="tag">Java 11</span>
+                <span class="tag">Hibernate</span>
+                <span class="tag">RabbitMQ</span>
+                <span class="tag">PostgreSQL</span>
+              </div>
+            </div>
+          </article>
+
+          <!-- Empleo 3 -->
+          <article class="timeline__item" id="exp-despegar">
+            <div class="timeline__marker"></div>
+            <div class="timeline__card">
+              <div class="timeline__header">
+                <div class="timeline__info">
+                  <h3 class="timeline__role">Java Developer</h3>
+                  <p class="timeline__company">
+                    <a class="timeline__company-link" href="https://www.despegar.com" target="_blank" rel="noopener noreferrer">
+                      Despegar.com
+                      <svg class="timeline__link-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg>
+                    </a>
+                  </p>
+                  <p class="timeline__contact">
+                    <a class="timeline__email-link" href="mailto:jobs@despegar.com">
+                      <svg class="timeline__email-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
+                      jobs@despegar.com
+                    </a>
+                  </p>
+                </div>
+                <span class="timeline__period">2016 — 2018</span>
+              </div>
+              <p class="timeline__description">
+                Formé parte del equipo de backend de búsqueda de vuelos, optimizando algoritmos de caché y mejorando
+                el tiempo de respuesta de las consultas más frecuentes. Primer rol profesional donde consolidé mis
+                bases en Java EE y patrones de diseño.
+              </p>
+              <div class="timeline__tags">
+                <span class="tag">Java EE</span>
+                <span class="tag">Oracle DB</span>
+                <span class="tag">Maven</span>
+                <span class="tag">Jenkins</span>
+              </div>
+            </div>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== HABILIDADES ===== -->
+    <section class="section" id="habilidades">
+      <div class="section__container">
+        <div class="section__label">Tecnologías</div>
+        <h2 class="section__title">Habilidades Técnicas</h2>
+        <div class="skills__grid">
+
+          <div class="skill-category">
+            <h3 class="skill-category__title">Backend</h3>
+            <ul class="skill-list">
+              <li class="skill-item">
+                <div class="skill-item__header">
+                  <span class="skill-item__name">Java (Spring Boot)</span>
+                  <span class="skill-item__level">Experto</span>
+                </div>
+                <div class="skill-item__bar"><div class="skill-item__fill" style="--skill-width: 95%"></div></div>
+              </li>
+              <li class="skill-item">
+                <div class="skill-item__header">
+                  <span class="skill-item__name">Python (Django / FastAPI)</span>
+                  <span class="skill-item__level">Avanzado</span>
+                </div>
+                <div class="skill-item__bar"><div class="skill-item__fill" style="--skill-width: 78%"></div></div>
+              </li>
+              <li class="skill-item">
+                <div class="skill-item__header">
+                  <span class="skill-item__name">Node.js</span>
+                  <span class="skill-item__level">Intermedio</span>
+                </div>
+                <div class="skill-item__bar"><div class="skill-item__fill" style="--skill-width: 60%"></div></div>
+              </li>
+            </ul>
+          </div>
+
+          <div class="skill-category">
+            <h3 class="skill-category__title">Frontend</h3>
+            <ul class="skill-list">
+              <li class="skill-item">
+                <div class="skill-item__header">
+                  <span class="skill-item__name">React</span>
+                  <span class="skill-item__level">Avanzado</span>
+                </div>
+                <div class="skill-item__bar"><div class="skill-item__fill" style="--skill-width: 75%"></div></div>
+              </li>
+              <li class="skill-item">
+                <div class="skill-item__header">
+                  <span class="skill-item__name">HTML5 / CSS3</span>
+                  <span class="skill-item__level">Avanzado</span>
+                </div>
+                <div class="skill-item__bar"><div class="skill-item__fill" style="--skill-width: 80%"></div></div>
+              </li>
+              <li class="skill-item">
+                <div class="skill-item__header">
+                  <span class="skill-item__name">TypeScript</span>
+                  <span class="skill-item__level">Intermedio</span>
+                </div>
+                <div class="skill-item__bar"><div class="skill-item__fill" style="--skill-width: 65%"></div></div>
+              </li>
+            </ul>
+          </div>
+
+          <div class="skill-category">
+            <h3 class="skill-category__title">Cloud & DevOps</h3>
+            <ul class="skill-list">
+              <li class="skill-item">
+                <div class="skill-item__header">
+                  <span class="skill-item__name">AWS</span>
+                  <span class="skill-item__level">Avanzado</span>
+                </div>
+                <div class="skill-item__bar"><div class="skill-item__fill" style="--skill-width: 85%"></div></div>
+              </li>
+              <li class="skill-item">
+                <div class="skill-item__header">
+                  <span class="skill-item__name">Docker / Kubernetes</span>
+                  <span class="skill-item__level">Avanzado</span>
+                </div>
+                <div class="skill-item__bar"><div class="skill-item__fill" style="--skill-width: 82%"></div></div>
+              </li>
+              <li class="skill-item">
+                <div class="skill-item__header">
+                  <span class="skill-item__name">CI/CD (GitHub Actions)</span>
+                  <span class="skill-item__level">Avanzado</span>
+                </div>
+                <div class="skill-item__bar"><div class="skill-item__fill" style="--skill-width: 80%"></div></div>
+              </li>
+            </ul>
+          </div>
+
+          <div class="skill-category">
+            <h3 class="skill-category__title">Bases de Datos</h3>
+            <ul class="skill-list">
+              <li class="skill-item">
+                <div class="skill-item__header">
+                  <span class="skill-item__name">PostgreSQL / MySQL</span>
+                  <span class="skill-item__level">Experto</span>
+                </div>
+                <div class="skill-item__bar"><div class="skill-item__fill" style="--skill-width: 90%"></div></div>
+              </li>
+              <li class="skill-item">
+                <div class="skill-item__header">
+                  <span class="skill-item__name">MongoDB</span>
+                  <span class="skill-item__level">Avanzado</span>
+                </div>
+                <div class="skill-item__bar"><div class="skill-item__fill" style="--skill-width: 72%"></div></div>
+              </li>
+              <li class="skill-item">
+                <div class="skill-item__header">
+                  <span class="skill-item__name">Redis</span>
+                  <span class="skill-item__level">Intermedio</span>
+                </div>
+                <div class="skill-item__bar"><div class="skill-item__fill" style="--skill-width: 65%"></div></div>
+              </li>
+            </ul>
+          </div>
+
+        </div>
+
+        <!-- Tecnologías adicionales (badge list) -->
+        <div class="skills__extra">
+          <h3 class="skills__extra-title">Otras tecnologías</h3>
+          <div class="skills__badges">
+            <span class="badge">Git</span>
+            <span class="badge">Kafka</span>
+            <span class="badge">RabbitMQ</span>
+            <span class="badge">Elasticsearch</span>
+            <span class="badge">Terraform</span>
+            <span class="badge">Ansible</span>
+            <span class="badge">JUnit 5</span>
+            <span class="badge">Mockito</span>
+            <span class="badge">Swagger / OpenAPI</span>
+            <span class="badge">Agile / Scrum</span>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ===== CONTACTO ===== -->
+    <section class="section section--dark" id="contacto">
+      <div class="section__container">
+        <div class="section__label">Hablemos</div>
+        <h2 class="section__title">Contacto</h2>
+        <div class="contact__grid">
+          <div class="contact__info">
+            <p class="contact__description">
+              ¿Tenés un proyecto interesante o querés charlar sobre oportunidades laborales?
+              No dudes en escribirme, ¡respondo en menos de 24 horas!
+            </p>
+            <ul class="contact__details">
+              <li class="contact__detail-item">
+                <span class="contact__detail-icon">📍</span>
+                <span>Buenos Aires, Argentina</span>
+              </li>
+              <li class="contact__detail-item">
+                <span class="contact__detail-icon">📧</span>
+                <a class="contact__detail-link" href="mailto:alejandro.martinez.dev@gmail.com">alejandro.martinez.dev@gmail.com</a>
+              </li>
+              <li class="contact__detail-item">
+                <span class="contact__detail-icon">💼</span>
+                <a class="contact__detail-link" href="https://www.linkedin.com/in/alejandromartinez" target="_blank" rel="noopener noreferrer">linkedin.com/in/alejandromartinez</a>
+              </li>
+              <li class="contact__detail-item">
+                <span class="contact__detail-icon">🐙</span>
+                <a class="contact__detail-link" href="https://github.com/alexmartinez-dev" target="_blank" rel="noopener noreferrer">github.com/alexmartinez-dev</a>
+              </li>
+            </ul>
+          </div>
+          <div class="contact__form-wrapper">
+            <form class="contact-form" id="contactForm" novalidate>
+              <div class="contact-form__group">
+                <label class="contact-form__label" for="inputNombre">Nombre completo</label>
+                <input
+                  class="contact-form__input"
+                  type="text"
+                  id="inputNombre"
+                  name="nombre"
+                  placeholder="Tu nombre"
+                  required
+                  autocomplete="name"
+                />
+              </div>
+              <div class="contact-form__group">
+                <label class="contact-form__label" for="inputEmail">Email</label>
+                <input
+                  class="contact-form__input"
+                  type="email"
+                  id="inputEmail"
+                  name="email"
+                  placeholder="tu@email.com"
+                  required
+                  autocomplete="email"
+                />
+              </div>
+              <div class="contact-form__group">
+                <label class="contact-form__label" for="inputMensaje">Mensaje</label>
+                <textarea
+                  class="contact-form__input contact-form__textarea"
+                  id="inputMensaje"
+                  name="mensaje"
+                  placeholder="¿En qué puedo ayudarte?"
+                  rows="5"
+                  required
+                ></textarea>
+              </div>
+              <button class="btn btn--primary btn--full" type="submit" id="btnEnviar">
+                Enviar mensaje
+              </button>
+              <div class="contact-form__feedback" id="formFeedback" aria-live="polite"></div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== FOOTER ===== -->
+    <footer class="footer">
+      <div class="footer__container">
+        <p class="footer__text">
+          &copy; 2026 <strong>Alejandro Martínez</strong>. Hecho con ❤️ y mucho ☕
+        </p>
+        <p class="footer__subtext">Desarrollado con HTML5, CSS3 y JavaScript vanilla.</p>
+      </div>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>
