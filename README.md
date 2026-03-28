@@ -24,4 +24,4 @@ cv-apellido-nombre/
 
 ## Ver proyecto
 
-🔗 [Ver proyecto en GitHub Pages](https://velauti12.github.io/cv-ficticio/)
+🔗 [Ver proyecto en GitHub Pages](https://velauti12.github.io/cv-Velasco-Bautista/)
