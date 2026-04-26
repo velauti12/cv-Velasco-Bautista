@@ -1,15 +1,15 @@
 /* =============================================
-   script.js — Interactividad del CV Digital
+   script.js — Digital CV Interactivity
    ============================================= */
 
 document.addEventListener('DOMContentLoaded', () => {
 
   // =============================================
-  // 1. BOTÓN "VOLVER ARRIBA"
+  // 1. "BACK TO TOP" BUTTON
   // =============================================
   const btnTop = document.getElementById('btnTop');
 
-  // Mostrar/ocultar el botón según el scroll
+  // Show/hide button based on scroll position
   const handleScrollBtn = () => {
     if (window.scrollY > 400) {
       btnTop.classList.add('btn-top--visible');
@@ -18,13 +18,13 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   };
 
-  // Acción al hacer clic: scroll suave al inicio de la página
+  // On click: smooth scroll to page top
   btnTop.addEventListener('click', () => {
     window.scrollTo({ top: 0, behavior: 'smooth' });
   });
 
   // =============================================
-  // 2. NAVBAR — Efecto al hacer scroll
+  // 2. NAVBAR — Scroll effect
   // =============================================
   const navbar = document.getElementById('navbar');
 
@@ -37,21 +37,21 @@ document.addEventListener('DOMContentLoaded', () => {
   };
 
   // =============================================
-  // 3. LISTENER DE SCROLL UNIFICADO (performance)
+  // 3. UNIFIED SCROLL LISTENER (performance)
   // =============================================
   window.addEventListener('scroll', () => {
     handleScrollBtn();
     handleNavbarScroll();
-    // Disparar la animación de barras de habilidades al entrar en el viewport
+    // Trigger skill bar animation when section enters the viewport
     animateSkillBars();
   }, { passive: true });
 
-  // Ejecutar una vez al cargar por si ya estamos en medio de la página
+  // Run once on load in case the page is already scrolled
   handleScrollBtn();
   handleNavbarScroll();
 
   // =============================================
-  // 4. INTERSECTION OBSERVER — Animaciones de entrada
+  // 4. INTERSECTION OBSERVER — Entrance animations
   // =============================================
   const revealElements = document.querySelectorAll(
     '.stat-card, .timeline__card, .skill-category, .contact__form-wrapper, .contact__info, .about__text-block, .about__stats'
@@ -63,7 +63,7 @@ document.addEventListener('DOMContentLoaded', () => {
     (entries) => {
       entries.forEach((entry, i) => {
         if (entry.isIntersecting) {
-          // Delay escalonado para que los elementos no aparezcan todos juntos
+          // Staggered delay so elements don't all appear at once
           setTimeout(() => {
             entry.target.classList.add('revealed');
           }, i * 80);
@@ -77,7 +77,7 @@ document.addEventListener('DOMContentLoaded', () => {
   revealElements.forEach(el => observer.observe(el));
 
   // =============================================
-  // 5. ANIMACIÓN DE BARRAS DE HABILIDADES
+  // 5. SKILL BAR ANIMATION
   // =============================================
   let skillsAnimated = false;
 
@@ -100,73 +100,73 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   };
 
-  // Verificar al cargar si ya está en vista
+  // Check on load if the section is already in view
   animateSkillBars();
 
   // =============================================
-  // 6. FORMULARIO DE CONTACTO — Validación y feedback
+  // 6. CONTACT FORM — Validation and feedback
   // =============================================
   const contactForm = document.getElementById('contactForm');
   const formFeedback = document.getElementById('formFeedback');
-  const btnEnviar = document.getElementById('btnEnviar');
+  const submitBtn = document.getElementById('btnEnviar');
 
   contactForm.addEventListener('submit', (e) => {
-    e.preventDefault(); // Prevenir envío real (CV ficticio)
+    e.preventDefault(); // Prevent real submission (demo CV)
 
-    const nombre = document.getElementById('inputNombre').value.trim();
+    const name = document.getElementById('inputNombre').value.trim();
     const email = document.getElementById('inputEmail').value.trim();
-    const mensaje = document.getElementById('inputMensaje').value.trim();
+    const message = document.getElementById('inputMensaje').value.trim();
 
-    // Limpiar feedback previo
+    // Clear previous feedback
     formFeedback.className = 'contact-form__feedback';
     formFeedback.textContent = '';
 
-    // Validación básica
-    if (!nombre || !email || !mensaje) {
-      mostrarFeedback('❌ Por favor completá todos los campos antes de enviar.', 'error');
+    // Basic validation
+    if (!name || !email || !message) {
+      showFeedback('❌ Por favor completá todos los campos antes de enviar.', 'error');
       return;
     }
 
-    if (!validarEmail(email)) {
-      mostrarFeedback('❌ El formato del email no es válido.', 'error');
+    if (!isValidEmail(email)) {
+      showFeedback('❌ El formato del email no es válido.', 'error');
       return;
     }
 
-    // Simular envío con estado de carga
-    btnEnviar.disabled = true;
-    btnEnviar.textContent = 'Enviando...';
+    // Simulate submission with loading state
+    submitBtn.disabled = true;
+    submitBtn.textContent = 'Enviando...';
 
     setTimeout(() => {
-      // Éxito simulado
-      mostrarFeedback(`✅ ¡Gracias, ${nombre}! Tu mensaje fue enviado correctamente. Te respondo pronto.`, 'success');
+      // Simulated success
+      showFeedback(`✅ ¡Gracias, ${name}! Tu mensaje fue enviado correctamente. Te respondo pronto.`, 'success');
       contactForm.reset();
-      btnEnviar.disabled = false;
-      btnEnviar.textContent = 'Enviar mensaje';
+      submitBtn.disabled = false;
+      submitBtn.textContent = 'Enviar mensaje';
     }, 1800);
   });
 
   /**
-   * Muestra el mensaje de feedback en el formulario
-   * @param {string} mensaje - Texto a mostrar
-   * @param {'success'|'error'} tipo - Tipo de feedback
+   * Displays a feedback message in the form
+   * @param {string} message - Text to display
+   * @param {'success'|'error'} type - Feedback type
    */
-  function mostrarFeedback(mensaje, tipo) {
-    formFeedback.textContent = mensaje;
-    formFeedback.classList.add(`contact-form__feedback--${tipo}`);
+  function showFeedback(message, type) {
+    formFeedback.textContent = message;
+    formFeedback.classList.add(`contact-form__feedback--${type}`);
   }
 
   /**
-   * Valida que el email tenga formato correcto
+   * Validates that an email address has the correct format
    * @param {string} email
    * @returns {boolean}
    */
-  function validarEmail(email) {
+  function isValidEmail(email) {
     const regex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
     return regex.test(email);
   }
 
   // =============================================
-  // 7. SMOOTH SCROLL para links de navegación
+  // 7. SMOOTH SCROLL for navigation links
   // =============================================
   const navLinks = document.querySelectorAll('.navbar__link');
 
@@ -185,46 +185,46 @@ document.addEventListener('DOMContentLoaded', () => {
   });
 
   // =============================================
-  // 8. EFECTO TYPING en el subtítulo del hero
+  // 8. TYPING EFFECT on hero subtitle
   // =============================================
   const subtitleEl = document.querySelector('.hero__subtitle');
   if (subtitleEl) {
-    const textos = [
+    const texts = [
       'Backend · Cloud · Arquitectura de Microservicios',
       'Java · Spring Boot · AWS · Docker',
       'Open Source · Clean Code · TDD',
     ];
-    let textoIndex = 0;
+    let textIndex = 0;
     let charIndex = 0;
-    let borrando = false;
+    let isDeleting = false;
 
     const typeWriter = () => {
-      const textoActual = textos[textoIndex];
+      const currentText = texts[textIndex];
 
-      if (!borrando) {
-        subtitleEl.textContent = textoActual.slice(0, charIndex + 1);
+      if (!isDeleting) {
+        subtitleEl.textContent = currentText.slice(0, charIndex + 1);
         charIndex++;
 
-        if (charIndex === textoActual.length) {
-          // Pausa antes de borrar
-          setTimeout(() => { borrando = true; typeWriter(); }, 2800);
+        if (charIndex === currentText.length) {
+          // Pause before deleting
+          setTimeout(() => { isDeleting = true; typeWriter(); }, 2800);
           return;
         }
       } else {
-        subtitleEl.textContent = textoActual.slice(0, charIndex - 1);
+        subtitleEl.textContent = currentText.slice(0, charIndex - 1);
         charIndex--;
 
         if (charIndex === 0) {
-          borrando = false;
-          textoIndex = (textoIndex + 1) % textos.length;
+          isDeleting = false;
+          textIndex = (textIndex + 1) % texts.length;
         }
       }
 
-      const velocidad = borrando ? 40 : 65;
-      setTimeout(typeWriter, velocidad);
+      const speed = isDeleting ? 40 : 65;
+      setTimeout(typeWriter, speed);
     };
 
-    // Iniciar con delay
+    // Start with a delay
     setTimeout(typeWriter, 1200);
   }
 
