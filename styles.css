@@ -732,7 +732,7 @@ ul {
 }
 
 .skill-item__bar {
-  height: 5px;
+  height: 0.3125rem;
   background: rgba(255, 255, 255, 0.06);
   border-radius: var(--radius-full);
   overflow: hidden;
@@ -750,6 +750,35 @@ ul {
 @keyframes growBar {
   from { transform: scaleX(0); }
   to { transform: scaleX(1); }
+}
+
+progress.skill-progress {
+  width: 100%;
+  height: 0.3125rem;
+  border-radius: var(--radius-full);
+  border: none;
+  overflow: hidden;
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  background: rgba(255, 255, 255, 0.1);
+  color: #00d2ff; 
+}
+
+progress.skill-progress::-webkit-progress-bar {
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: var(--radius-full);
+}
+
+progress.skill-progress::-webkit-progress-value {
+  background: linear-gradient(90deg, #00d2ff 0%, #3a7bd5 100%);
+  border-radius: var(--radius-full);
+  transition: width 1.2s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+progress.skill-progress::-moz-progress-bar {
+  background: linear-gradient(90deg, #00d2ff 0%, #3a7bd5 100%);
+  border-radius: var(--radius-full);
 }
 
 .skills__extra {
